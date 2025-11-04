@@ -1,6 +1,7 @@
 package it.unibo.collections.sets;
 
 import java.util.Collection;
+import java.util.TreeSet;
 
 /**
  * Example class using {@link java.util.Set}.
@@ -24,17 +25,30 @@ public final class UseSet {
          *
          * 1) Builds a TreeSet containing Strings
          */
+        final TreeSet<String> set = new TreeSet<>();
+        final StringBuilder stringBuilder = new StringBuilder();
+
         /*
          * 2) Populates such Collection with all the Strings representing numbers ranging from "1" to
          * "20" (both included)
          */
+
+        for (int i = 1; i <= ELEMS; i++) {
+            set.add(Integer.toString(i));
+            stringBuilder.append(i);
+            if (i < ELEMS){
+                stringBuilder.append(",");
+            }
+        }
         /*
          * 3) Prints its content
          */
+        System.out.println(stringBuilder);
         /*
          * 4) Removes all those strings whose represented number is divisible by three.
          * Note: the method removeIf(Predicate) is not allowed.
          */
+
         /*
          * 5) Prints the content of the Set using a for-each construct
          */
