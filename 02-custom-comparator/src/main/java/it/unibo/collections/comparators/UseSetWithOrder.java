@@ -25,6 +25,8 @@ public final class UseSetWithOrder {
          * The comparator must convert the strings to double, then compare the doubles to find the biggest.
          * The comparator does not need to deal with the case of Strings which are not parseable as doubles.
          */
+
+        
         /*
          * 2) Inserts in the set a hundred strings containing randomly generated numbers
          * (use Math.random(), and convert to String appropriately)
