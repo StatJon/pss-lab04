@@ -25,8 +25,8 @@ public final class UseSet {
          *
          * 1) Builds a TreeSet containing Strings
          */
-        final TreeSet<String> set = new TreeSet<>();
-        final StringBuilder stringBuilder = new StringBuilder();
+        TreeSet<String> set = new TreeSet<>();
+        StringBuilder stringBuilder = new StringBuilder();
 
         /*
          * 2) Populates such Collection with all the Strings representing numbers ranging from "1" to
@@ -48,10 +48,25 @@ public final class UseSet {
          * 4) Removes all those strings whose represented number is divisible by three.
          * Note: the method removeIf(Predicate) is not allowed.
          */
+        stringBuilder.setLength(0);
+        final TreeSet<String> tempSet = new TreeSet<>();
+        for (final String i : set){
+            if (Integer.parseInt(i) % 3 == 0){
+                tempSet.add(i);
+                stringBuilder.append(i);
+                stringBuilder.append(",");
 
+            }
+        }
+        set = tempSet;
+        System.out.println(set);
+        System.out.println(stringBuilder);
         /*
          * 5) Prints the content of the Set using a for-each construct
          */
+        for (var element : set){
+            System.out.println(element);
+        }
         /*
          * 6) Verifies whether all the numbers left in the set are even
          */
