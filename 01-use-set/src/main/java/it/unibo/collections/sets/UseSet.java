@@ -70,5 +70,12 @@ public final class UseSet {
         /*
          * 6) Verifies whether all the numbers left in the set are even
          */
+        for (var element : set){
+            if (Integer.parseInt(element) % 2 == 0){
+                System.out.println(element + " is even");
+            }else{
+                System.out.println(element + " is odd");
+            }
+        }
     }
 }
